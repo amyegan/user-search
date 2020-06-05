@@ -1,0 +1,4 @@
+<form (ngSubmit)="onSubmit()" #searchForm="ngForm">
+  <input [(ngModel)]="searchTerm" name="searchTerm" />
+  <button type="submit" [disabled]="searchTerm == null">Search</button>
+</form>
