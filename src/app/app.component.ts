@@ -14,10 +14,12 @@ export class AppComponent {
   searchTerm: string;
   itemsPerPage = 8;
   errorMessage: string;
+  isLoading: boolean;
 
   constructor(private service: SearchService) {}
 
   onSearched(searchTerm: string, pageNumber = 1) {
+    this.isLoading = true;
     this.service
       .getSearchResults(searchTerm, this.itemsPerPage, pageNumber)
       .subscribe(
@@ -35,6 +37,9 @@ export class AppComponent {
           ) {
             this.errorMessage + " Exceeded rate limit.";
           }
+        },
+        () => {
+          this.isLoading = false;
         }
       );
   }

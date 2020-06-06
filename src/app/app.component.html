@@ -2,6 +2,7 @@
 <p class="errorAlert" *ngIf="errorMessage">{{errorMessage}}</p>
 <div class="container">
   <app-search-box (searched)="onSearched($event)"></app-search-box>
+  <div *ngIf="isLoading"><strong>Loading results...</strong></div>
   <app-search-results [users]="result?.users"></app-search-results>
   <app-pagination
     *ngIf="result"
