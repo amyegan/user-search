@@ -1,6 +1,5 @@
 <ul>
   <li *ngFor="let user of users">
-    <a href="{{user.url}}">{{ user.login }}</a> | 
-    <a href="{{user.html_url}}">Profile</a>
+    <app-user-details [user]="user"></app-user-details>
   </li>
 </ul>
