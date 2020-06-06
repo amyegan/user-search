@@ -8,6 +8,7 @@ import { UserDetails } from '../shared/user-details';
 })
 export class UserDetailsComponent implements OnInit {
   @Input() user: UserDetails;
+  @Input() isLast: boolean;
 
   constructor() { }
 
