@@ -1,0 +1,7 @@
+<p>Found {{total || 0}} matching results.</p>
+<p *ngIf="total > 1000">Only the first 1000 results can be viewed.</p>
+
+<button (click)="paginate(1)" [disabled]="current===1" type="button">First</button>
+<button (click)="paginate(current-1)" [disabled]="(current-1)<1" type="button">Previous</button>
+<button (click)="paginate(current+1)" [disabled]="(current+1)>lastPageNumber" type="button">Next</button>
+<button (click)="paginate(lastPageNumber)" [disabled]="current===lastPageNumber" type="button">Last</button>
