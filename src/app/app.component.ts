@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from './services/search.service';
 import { SearchResult } from './shared/search-result';
-import { UserDetails } from './shared/user-details';
 
 @Component({
   selector: 'app-root',

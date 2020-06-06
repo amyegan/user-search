@@ -1,4 +1,4 @@
-<div class="user-details" [ngClass]="{ last: isLast }">
+<div class="user-details" [ngClass]="{ last: isLast }" *ngIf="user">
   <img src="{{ user.avatar_url }}" />
   <div>
     <p>
