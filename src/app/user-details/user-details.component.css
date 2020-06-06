@@ -10,7 +10,7 @@ img {
 .user-details {
   display: flex;
   max-width: 400px;
-  margin: 0 auto 1em;
+  margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #d1d1d1;
 }
@@ -18,4 +18,8 @@ img {
 .user-details.last {
   padding-bottom: 0;
   border-bottom: none;
+}
+
+p {
+  margin-bottom: 0.25em;
 }

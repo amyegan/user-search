@@ -1,6 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align: center;">
-  <h1>Welcome to {{ title }}!</h1>
+<h1>Welcome to {{ title }}!</h1>
+<div class="container">
   <app-search-box (searched)="onSearched($event)"></app-search-box>
   <app-search-results [users]="result?.users"></app-search-results>
   <app-pagination

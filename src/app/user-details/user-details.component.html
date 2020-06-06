@@ -1,15 +1,19 @@
-<div class="user-details" [ngClass]="{'last' : isLast}">
+<div class="user-details" [ngClass]="{ last: isLast }">
   <img src="{{ user.avatar_url }}" />
   <div>
-    <strong>
-      {{ user.name }}
-    </strong>
-    <small>
-      <a href="{{ user.html_url }}">{{ user.login }}</a>
-    </small>
+    <p>
+      <strong>
+        {{ user.name }}
+      </strong>
+      <small>
+        <a href="{{ user.html_url }}">{{ user.login }}</a>
+      </small>
+    </p>
     <p>{{ user.bio }}</p>
-    <p><a href="{{user.followers_url}}">{{ user.followers }} followers</a> | 
-      <a href="{{user.following_url}}">following {{ user.following }}</a></p>
+    <p>
+      <a href="{{ user.followers_url }}">{{ user.followers }} followers</a> |
+      <a href="{{ user.following_url }}">following {{ user.following }}</a>
+    </p>
     <a href="{{ user.url }}">API Link</a>
   </div>
 </div>
