@@ -31,12 +31,6 @@ export class AppComponent {
         (error: HttpErrorResponse) => {
           console.error("Problem in onSearched()", error);
           this.errorMessage = "Unable to load results.";
-          if (
-            error.headers.has("X-RateLimit-Remaining") &&
-            Number(error.headers?.get("X-RateLimit-Remaining")) === 0
-          ) {
-            this.errorMessage + " Exceeded rate limit.";
-          }
         },
         () => {
           this.isLoading = false;
