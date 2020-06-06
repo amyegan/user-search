@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SearchResult } from '../shared/search-result';
+import { UserDetails } from '../shared/user-details';
 
 @Component({
   selector: 'app-search-results',
@@ -7,7 +7,7 @@ import { SearchResult } from '../shared/search-result';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  @Input() result: SearchResult; //object with list of results as prop 
+  @Input() users: Array<UserDetails>; //object with list of results as prop 
 
   constructor() { }
 

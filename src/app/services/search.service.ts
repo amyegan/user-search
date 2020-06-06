@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable, forkJoin } from "rxjs";
+import { Observable, forkJoin, of } from "rxjs";
 import { map, mergeMap } from "rxjs/operators";
 import { SearchResult } from "../shared/search-result";
 import { UserDetails } from "../shared/user-details";
@@ -13,7 +13,7 @@ export class SearchService {
 
   getSearchResults(
     searchString: string,
-    itemsPerPage = 10,
+    itemsPerPage = 8,
     pageNumber = 1
   ): Observable<SearchResult> {
     // modified version of this solution https://stackoverflow.com/a/53579412
