@@ -24,4 +24,10 @@ describe('SearchBoxComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('onSubmit() should emit value', () => {
+    const spy = spyOn(component.searched, 'emit');
+    component.onSubmit();
+    expect(spy).toHaveBeenCalled();
+  });
 });

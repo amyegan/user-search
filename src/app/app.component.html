@@ -1,4 +1,5 @@
 <h1>Welcome to {{ title }}!</h1>
+<p class="errorAlert" *ngIf="errorMessage">{{errorMessage}}</p>
 <div class="container">
   <app-search-box (searched)="onSearched($event)"></app-search-box>
   <app-search-results [users]="result?.users"></app-search-results>
