@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UserDetails } from '../shared/user-details';
 
 @Component({
@@ -6,12 +6,6 @@ import { UserDetails } from '../shared/user-details';
   templateUrl: './search-results.component.html',
   styleUrls: ['./search-results.component.css']
 })
-export class SearchResultsComponent implements OnInit {
-  @Input() users: Array<UserDetails>; //object with list of results as prop 
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class SearchResultsComponent {
+  @Input() users: Array<UserDetails>;
 }

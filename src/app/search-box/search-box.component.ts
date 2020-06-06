@@ -10,8 +10,6 @@ export class SearchBoxComponent {
   @Output() searched = new EventEmitter<string>();
   searchTerm: string;
 
-  constructor() { }
-
   onSubmit() {
     this.searched.emit(this.searchTerm);
   }

@@ -23,7 +23,6 @@ export class SearchService {
       )
       .pipe(
         mergeMap((result: SearchResult) => {
-          console.log("mergeMapping result", result);
           let apiArray = result.items.map((item) =>
             this.http.get<UserDetails>(item.url)
           );

@@ -13,8 +13,6 @@ export class PaginationComponent implements OnChanges {
   current = 1;
   lastPageNumber = 1;
 
-  constructor() { }
-
   ngOnChanges(changes: SimpleChanges): void {
     let maxItems = this.total < 1000 ? this.total : 1000;
     this.lastPageNumber = Math.ceil(maxItems/this.itemsPerPage);

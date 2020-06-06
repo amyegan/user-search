@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UserDetails } from '../shared/user-details';
 
 @Component({
@@ -6,13 +6,7 @@ import { UserDetails } from '../shared/user-details';
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.css']
 })
-export class UserDetailsComponent implements OnInit {
+export class UserDetailsComponent {
   @Input() user: UserDetails;
   @Input() isLast: boolean;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
