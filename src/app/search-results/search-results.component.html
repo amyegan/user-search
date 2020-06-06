@@ -1,6 +1,5 @@
 <ul>
-  <li *ngFor="let item of result?.items">
-    <a href="{{item.url}}">{{ item.login }}</a> | 
-    <a href="{{item.html_url}}">Profile</a>
+  <li *ngFor="let user of users; let i = index">
+    <app-user-details [user]="user" [isLast]="i === users.length - 1"></app-user-details>
   </li>
 </ul>

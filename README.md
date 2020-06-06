@@ -1,6 +1,15 @@
-# UserSearch
+# User Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This app allows you to provide a search string to look up matching users. The app displays the user's name, username, follower count, following count, and an API link to the users full details for further exploration.
+
+## Package Highlights
+
+This project uses...
+
+- [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7, and related dependencies
+- [Angular](https://github.com/angular/angular) version 9.1.9, and related dependencies
+- [Normalize.css](https://github.com/necolas/normalize.css) version 8.0.1
+- [Milligram](https://github.com/milligram/milligram) version 1.4.0
 
 ## Development server
 
