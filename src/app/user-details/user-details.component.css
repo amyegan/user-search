@@ -9,7 +9,6 @@ img {
 
 .user-details {
   display: flex;
-  max-width: 400px;
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #d1d1d1;
@@ -22,4 +21,15 @@ img {
 
 p {
   margin-bottom: 0.25em;
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+@media (max-width: 470px) {
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }

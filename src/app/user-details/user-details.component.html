@@ -1,6 +1,6 @@
 <div class="user-details" [ngClass]="{ last: isLast }" *ngIf="user">
   <img src="{{ user.avatar_url }}" />
-  <div>
+  <div class="user-info">
     <p>
       <strong>
         {{ user.name }}
@@ -14,6 +14,6 @@
       <a href="{{ user.followers_url }}">{{ user.followers }} followers</a> |
       <a href="{{ user.following_url }}">following {{ user.following }}</a>
     </p>
-    <a href="{{ user.url }}">API Link</a>
   </div>
+  <a href="{{ user.url }}">API Data</a>
 </div>
