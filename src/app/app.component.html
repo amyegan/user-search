@@ -1,11 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div style="text-align: center;">
+  <h1>Welcome to {{ title }}!</h1>
   <app-search-box (searched)="onSearched($event)"></app-search-box>
   <app-search-results [result]="result"></app-search-results>
+  <app-pagination
+    *ngIf="result"
+    [total]="result?.total_count"
+    [itemsPerPage]="result?.items.length"
+    (clicked)="onPaginate($event)"></app-pagination>
 </div>
-
 
 <router-outlet></router-outlet>

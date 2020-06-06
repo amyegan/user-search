@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SearchResult } from '../shared/search-result';
 
 @Component({
   selector: 'app-search-results',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./search-results.component.css']
 })
 export class SearchResultsComponent implements OnInit {
-  @Input() result: any; //object with list of results as prop 
+  @Input() result: SearchResult; //object with list of results as prop 
 
   constructor() { }
 

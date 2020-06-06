@@ -1,5 +1,6 @@
 <ul>
   <li *ngFor="let item of result?.items">
-    {{ item.login }}
+    <a href="{{item.url}}">{{ item.login }}</a> | 
+    <a href="{{item.html_url}}">Profile</a>
   </li>
 </ul>

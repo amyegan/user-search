@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from './services/search.service';
+import { SearchResult } from './shared/search-result';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,21 @@ import { SearchService } from './services/search.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'user-search';
-  result: Array<any>;
+  title = 'User Search';
+  result: SearchResult;
+  searchTerm: string;
+  itemsPerPage = 30;
 
   constructor(private service: SearchService) { }
 
-  onSearched(searchTerm: string) {
-    this.service.getSearchResults(searchTerm).subscribe(result => {
+  onSearched(searchTerm: string, pageNumber = 1) {
+    this.service.getSearchResults(searchTerm, pageNumber).subscribe(result => {
       this.result = result;
-      console.log('result', result)
+      this.searchTerm = searchTerm;
     });
+  }
 
+  onPaginate(pageNumber: number) {
+    this.onSearched(this.searchTerm, pageNumber);
   }
 }
