@@ -2,3 +2,18 @@ button {
   margin-left: 0.25em;
   margin-right: 0.25em;
 }
+
+.page-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media(max-width: 470px) {
+  .page-buttons-first {
+    flex-direction: row-reverse;
+  }
+
+  .page-buttons-last {
+    text-align: right;
+  }
+}
