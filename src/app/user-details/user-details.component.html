@@ -10,9 +10,7 @@
       </small>
     </p>
     <p>{{ user.bio }}</p>
-    <p>
-      <a href="{{ user.followers_url }}">{{ user.followers }} followers</a> |
-      <a href="{{ user.following_url }}">following {{ user.following }}</a>
+    <p>{{ user.followers }} followers | following {{ user.following }}
     </p>
   </div>
   <a href="{{ user.url }}">API Data</a>
